@@ -22,9 +22,9 @@ sudo paccache -r
 echo "Removing orphaned packages..."
 orphans=$(pacman -Qtdq)
 if [ -n "$orphans" ]; then
-	sudo pacman -Rns $orphans --noconfirm
+  sudo pacman -Rns "$orphans" --noconfirm
 else
-	echo "No orphaned packages found."
+  echo "No orphaned packages found."
 fi
 
 echo "Checking for failed systemd services..."
