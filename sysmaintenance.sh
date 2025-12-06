@@ -15,7 +15,7 @@ yay --noconfirm
 # pacman does not remove old packages from cache.
 # this command removes the all but the last 3 versions of installed packages.
 echo "Cleaning package cache (keeping last 3 versions)..."
-sudo paccache -r
+sudo paccache -rvk 3
 
 # this command searches for and removes any dependencies
 # that were installed previously and are no longer utilized.
